@@ -1,0 +1,27 @@
+---
+interface Props {
+    logos: { src: string; alt: string; }[];
+}
+
+const { logos } = Astro.props;
+---
+
+<div class="relative overflow-hidden bg-white py-12">
+    <div class="flex space-x-16 animate-scroll">
+        {logos.map((logo) => (
+            <img 
+                src={logo.src} 
+                alt={logo.alt}
+                class="h-12 w-auto object-contain"
+            />
+        ))}
+        {/* Duplicate logos for seamless scrolling */}
+        {logos.map((logo) => (
+            <img 
+                src={logo.src} 
+                alt={logo.alt}
+                class="h-12 w-auto object-contain"
+            />
+        ))}
+    </div>
+</div>

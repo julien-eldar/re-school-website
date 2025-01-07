@@ -7,10 +7,10 @@ interface Props {
 
 const { href, variant = 'primary', class: className } = Astro.props;
 
-const baseStyles = "inline-block px-6 py-3 rounded-lg font-medium transition-colors";
+const baseStyles = "inline-block rounded-lg font-medium transition-all duration-300 transform hover:scale-105";
 const variantStyles = {
-	primary: "bg-blue-600 text-white hover:bg-blue-700",
-	secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200"
+	primary: "bg-gradient-to-r from-primary-600 to-secondary-600 text-white hover:shadow-lg",
+	secondary: "bg-white text-primary-600 hover:text-primary-700 hover:shadow-lg"
 };
 ---
 

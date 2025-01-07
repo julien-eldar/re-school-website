@@ -2,29 +2,50 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import LogoCarousel from '../components/LogoCarousel.astro';
+
+const clientLogos = [
+    { src: "/logos/client1.png", alt: "Client 1" },
+    { src: "/logos/client2.png", alt: "Client 2" },
+    { src: "/logos/client3.png", alt: "Client 3" },
+    { src: "/logos/client4.png", alt: "Client 4" },
+    { src: "/logos/client5.png", alt: "Client 5" },
+];
 ---
 
 <Layout title="Re-School - Expert en IA Générative">
 	<main>
 		<!-- Hero Section -->
-		<section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
+		<section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
 			<div class="container mx-auto px-6 text-center">
-				<h1 class="text-5xl font-bold text-gray-900 mb-6">
+				<h1 class="text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
 					IA Générative:<br />
-					<span class="text-blue-600">Atteignez de Nouveaux Sommets</span>
+					<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
+						Atteignez de Nouveaux Sommets
+					</span>
 				</h1>
 				<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
 					Accélérez votre croissance, gagnez en précision et créez une valeur inégalée grâce à l'intelligence artificielle.
 				</p>
-				<Button href="/contact">Parlons-en</Button>
+				<Button href="/contact" class="text-lg px-8 py-4">Parlons-en</Button>
+			</div>
+		</section>
+
+		<!-- Client Logos -->
+		<section class="py-12 bg-white">
+			<div class="container mx-auto px-6">
+				<h2 class="text-2xl font-semibold text-center text-gray-600 mb-8">Ils nous font confiance</h2>
+				<LogoCarousel logos={clientLogos} />
 			</div>
 		</section>
 
 		<!-- About Section -->
 		<section class="py-20">
 			<div class="container mx-auto px-6">
-				<h2 class="text-3xl font-bold text-center mb-12">Notre Expertise, Votre Avantage</h2>
-				<p class="text-lg text-gray-600 max-w-3xl mx-auto text-center">
+				<h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
+					Notre Expertise, Votre Avantage
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto text-center leading-relaxed">
 					Dans un environnement en constante évolution, la maîtrise de l'IA Générative est un atout décisif. 
 					Re-School vous accompagne pour décrypter, maîtriser et déployer cette technologie transformative. 
 					Notre approche pragmatique et nos expertises sectorielles garantissent des résultats concrets et rapides.
@@ -33,9 +54,11 @@ import ServiceCard from '../components/ServiceCard.astro';
 		</section>
 
 		<!-- Services Section -->
-		<section class="py-20 bg-gray-50">
+		<section class="py-20 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
 			<div class="container mx-auto px-6">
-				<h2 class="text-3xl font-bold text-center mb-12">Nos Offres</h2>
+				<h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
+					Nos Offres
+				</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					<ServiceCard
 						title="AI Starter"
@@ -64,22 +87,24 @@ import ServiceCard from '../components/ServiceCard.astro';
 		<!-- Testimonials Section -->
 		<section class="py-20">
 			<div class="container mx-auto px-6">
-				<h2 class="text-3xl font-bold text-center mb-12">Ce Que Disent Nos Clients</h2>
+				<h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
+					Ce Que Disent Nos Clients
+				</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<blockquote class="bg-white p-8 rounded-xl shadow-lg">
-						<p class="text-gray-600 mb-4">
+					<blockquote class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+						<p class="text-gray-600 mb-4 text-lg italic">
 							"Private equity firms can reach greater heights by integrating generative AI into their businesses, but getting started requires a thoughtful approach."
 						</p>
-						<footer class="font-medium">
+						<footer class="font-medium text-primary-600">
 							Ben Ellencweig
 							<span class="text-gray-500 block text-sm">Senior Partner - McKinsey</span>
 						</footer>
 					</blockquote>
-					<blockquote class="bg-white p-8 rounded-xl shadow-lg">
-						<p class="text-gray-600 mb-4">
+					<blockquote class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+						<p class="text-gray-600 mb-4 text-lg italic">
 							"The rise of generative AI brings huge upside potential to PE firms that have invested in their data environment and infrastructure. The technology also lends opportunities to portfolio companies. Our research estimates a 6-7% productivity gain and a 3-4% revenue uplift."
 						</p>
-						<footer class="font-medium">
+						<footer class="font-medium text-primary-600">
 							Ramnath Venkataraman
 							<span class="text-gray-500 block text-sm">Senior Managing Director - Accenture</span>
 						</footer>
@@ -89,13 +114,13 @@ import ServiceCard from '../components/ServiceCard.astro';
 		</section>
 
 		<!-- CTA Section -->
-		<section class="py-20 bg-blue-600 text-white">
+		<section class="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
 			<div class="container mx-auto px-6 text-center">
-				<h2 class="text-3xl font-bold mb-6">Prêt à Démarrer ?</h2>
+				<h2 class="text-4xl font-bold mb-6">Prêt à Démarrer ?</h2>
 				<p class="text-xl mb-8 opacity-90">
 					Discutons de vos objectifs et explorons ensemble comment l'IA Générative peut transformer votre activité.
 				</p>
-				<Button href="/contact" variant="secondary">Contactez-nous</Button>
+				<Button href="/contact" variant="secondary" class="text-lg">Contactez-nous</Button>
 			</div>
 		</section>
 	</main>
