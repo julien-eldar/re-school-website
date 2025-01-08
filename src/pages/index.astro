@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import LogoCarousel from '../components/LogoCarousel.astro';
+import TeamMember from '../components/TeamMember.astro';
+import ContactForm from '../components/ContactForm.astro';
+
 
 const clientLogos = [
     { src: "/logos/client1.png", alt: "Client 1" },
@@ -18,7 +21,7 @@ const clientLogos = [
 <Layout title="Re-School - Expert en IA Générative">
 	<main>
 		<!-- Hero Section -->
-		<section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
+		<section id="hero" class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
 			<div class="container mx-auto px-6 text-center">
 				<h1 class="text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
 					IA Générative:<br />
@@ -73,19 +76,19 @@ const clientLogos = [
 							Identifiez rapidement les opportunités clés.
 						</p>
 						<div slot="section-1" class="mb-4">
-							<h4 class="text-base font-semibold text-primary-700 mb-2">Analyse Personnalisée</h4>
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Stratégie sur mesure</h4>
 							<p class="text-gray-600 text-sm">
 								Entretiens approfondis pour comprendre vos défis et vos objectifs spécifiques.
 							</p>
 						</div>
 						<div slot="section-2" class="mb-4">
-							<h4 class="text-base font-semibold text-primary-700 mb-2">Plan d'Action Concret</h4>
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Plan d'Action Concret</h4>
 							<p class="text-gray-600 text-sm">
-								Élaboration d'une feuille de route claire avec des étapes réalisables et des indicateurs de succès.
+								Élaboration d'une feuille de route claire avec des cas d'usage validés et cadrés.
 							</p>
 						</div>
 						<div slot="section-3" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Formation Initiale</h4>
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Formation Initiale</h4>
 							<p class="text-gray-600 text-sm">
 								Session introductive pour familiariser vos équipes avec les concepts fondamentaux de l'IA.
 							</p>
@@ -98,20 +101,20 @@ const clientLogos = [
 							Devenez autonome dans l'utilisation de l'IA.
 						</p>
 						<div slot="section-1" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Modules Thématiques</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Modules Thématiques</h4>
+							<p class="text-gray-600 text-sm">
 								Formations ciblées sur les applications de l'IA générative dans votre secteur d'activité.
 							</p>
 						</div>
 						<div slot="section-2" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Ateliers Pratiques</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Ateliers Pratiques</h4>
+							<p class="text-gray-600 text-sm">
 								Mise en œuvre concrète des outils et des techniques d'IA à travers des cas d'usage réels.
 							</p>
 						</div>
 						<div slot="section-3" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Suivi Personnalisé</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Suivi Personnalisé</h4>
+							<p class="text-gray-600 text-sm">
 								Accompagnement continu pour assurer l'intégration et l'adoption des compétences acquises.
 							</p>
 						</div>
@@ -123,20 +126,20 @@ const clientLogos = [
 							Optimisez vos processus clés grâce à l'IA.
 						</p>
 						<div slot="section-1" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Diagnostic Approfondi</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Diagnostic Approfondi</h4>
+							<p class="text-gray-600 text-sm">
 								Identification des processus à fort potentiel pour l'intégration de l'intelligence artificielle.
 							</p>
 						</div>
 						<div slot="section-2" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Développement Personnalisé</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Développement Personnalisé</h4>
+							<p class="text-gray-600 text-sm">
 								Conception et mise en place de solutions IA adaptées à vos besoins spécifiques.
 							</p>
 						</div>
 						<div slot="section-3" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Intégration et Suivi</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Intégration et Suivi</h4>
+							<p class="text-gray-600 text-sm">
 								Déploiement des solutions IA et suivi de leurs performances pour une amélioration continue.
 							</p>
 						</div>
@@ -144,18 +147,17 @@ const clientLogos = [
 				
 					<ServiceCard title="AI Architecture" duration="2 semaines">
 						<p slot="subtitle" class="text-gray-700 text-md mb-4 italic">
-							Sécurisez votre environnement IA.
-							Garantissez la confidentialité de vos données.
+							Sécurisez votre environnement IA. Garantissez la confidentialité de vos données.
 						</p>
 						<div slot="section-1" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Infrastructure Sécurisée</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Infrastructure Sécurisée</h4>
+							<p class="text-gray-600 text-sm">
 								Mise en place d'une architecture IA privée pour une protection optimale de vos informations.
 							</p>
 						</div>
 						<div slot="section-2" class="mb-4">
-							<h4 class="text-lg font-semibold text-primary-700 mb-2">Conformité et Gouvernance</h4>
-							<p class="text-gray-600">
+							<h4 class="text-md font-semibold text-primary-700 mb-2">Conformité et Gouvernance</h4>
+							<p class="text-gray-600 text-sm">
 								Solutions pour répondre aux exigences réglementaires et assurer une gestion responsable de l'IA.
 							</p>
 						</div>
@@ -205,6 +207,48 @@ const clientLogos = [
 					Discutons de vos objectifs et explorons ensemble comment l'IA Générative peut transformer votre activité.
 				</p>
 				<Button href="/contact" variant="secondary" class="text-lg" px-6>Contactez-nous</Button>
+			</div>
+		</section>
+		
+		<section id="about" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-6">
+				<h2 class="text-3xl font-bold text-center mb-12">Notre Équipe dirigeante</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<TeamMember
+						name="Julien"
+						role="Co-fondateur & CEO"
+						description="Expert en stratégie IA et transformation digitale avec plus de 10 ans d'expérience dans le conseil."
+					/>
+					<TeamMember
+						name="Gabriel"
+						role="Co-fondateur & CTO"
+						description="Architecte IA spécialisé dans le développement de solutions d'IA générative pour le secteur financier."
+					/>
+					<TeamMember
+						name="Jonathan"
+						role="Co-fondateur & COO"
+						description="Spécialiste en gestion de projet et déploiement de solutions IA à grande échelle."
+					/>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="py-20">
+			<div class="container mx-auto px-6">
+				<h1 class="text-4xl font-bold text-center mb-12">Contactez-Nous</h1>
+				<div class="max-w-2xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+						<div>
+							<h2 class="text-2xl font-semibold mb-4">Coordonnées</h2>
+							<div class="space-y-4 text-gray-600">
+								<p>
+									<strong class="block">Email:</strong>
+									contact [at] re-school [.] fr
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- <ContactForm /> -->
+				</div>
 			</div>
 		</section>
 	</main>
