@@ -3,13 +3,30 @@ interface Props {
 	name: string;
 	role: string;
 	description: string;
+	linkedInUrl?: string;
 }
 
-const { name, role, description } = Astro.props;
+const { name, role, description, linkedInUrl } = Astro.props;
 ---
 
 <div class="bg-white p-6 rounded-xl shadow-lg">
 	<h3 class="text-xl font-semibold mb-2">{name}</h3>
 	<p class="text-blue-600 mb-3 text-sm">{role}</p>
 	<p class="text-gray-600">{description}</p>
+
+	<!-- Only show the button if linkedInUrl is provided -->
+	{linkedInUrl && (
+		<a
+		  href={linkedInUrl}
+		  target="_blank"
+		  rel="noopener noreferrer"
+		  class="mt-6 inline-flex items-center justify-center"
+		>
+		  <img
+			src="/linkedin-button.png"
+			alt="LinkedIn"
+			class="w-6 h-6 hover:opacity-80 transition-opacity"
+		  />
+		</a>
+	  )}
 </div>
