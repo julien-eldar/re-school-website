@@ -67,26 +67,102 @@ const clientLogos = [
 					Nos offres sont conçues pour vous accompagner dans chacun de ces challenges.
 				</p>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<ServiceCard
-						title="AI Starter"
-						description="Ateliers collaboratifs, entretiens experts pour identifier les cas d'usage prioritaires et élaborer un plan d'action initial. Une journée de formation introductive incluse."
-						duration="2 semaines"
-					/>
-					<ServiceCard
-						title="AI Upskill"
-						description="Un programme de formation sur mesure pour intégrer l'IA Générative dans vos processus opérationnels. Prise en main des outils clés par vos équipes."
-						duration="4 semaines + accompagnement continu"
-					/>
-					<ServiceCard
-						title="AI Pipeline"
-						description="Sélection des processus cibles, définition des objectifs, configuration et déploiement de solutions IA sur mesure."
-						duration="4 semaines"
-					/>
-					<ServiceCard
-						title="AI Architecture"
-						description="Mise en place d'un environnement IA privatif sécurisé pour garantir la confidentialité de vos données."
-						duration="2 semaines"
-					/>
+					<ServiceCard title="AI Starter" duration="2 semaines">
+						<p slot="subtitle" class="text-gray-700 text-md mb-4">
+							Accélérez votre transformation avec l'IA.
+							Identifiez rapidement les opportunités clés.
+						</p>
+						<div slot="section-1" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Analyse Personnalisée</h4>
+							<p class="text-gray-600">
+								Entretiens approfondis pour comprendre vos défis et vos objectifs spécifiques.
+							</p>
+						</div>
+						<div slot="section-2" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Plan d'Action Concret</h4>
+							<p class="text-gray-600">
+								Élaboration d'une feuille de route claire avec des étapes réalisables et des indicateurs de succès.
+							</p>
+						</div>
+						<div slot="section-3" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Formation Initiale</h4>
+							<p class="text-gray-600">
+								Session introductive pour familiariser vos équipes avec les concepts fondamentaux de l'IA.
+							</p>
+						</div>
+					</ServiceCard>
+				
+					<ServiceCard title="AI Upskill" duration="4 semaines + accompagnement continu">
+						<p slot="subtitle" class="text-gray-700 text-md mb-4">
+							Développez les compétences IA de vos équipes.
+							Devenez autonome dans l'utilisation de l'IA.
+						</p>
+						<div slot="section-1" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Modules Thématiques</h4>
+							<p class="text-gray-600">
+								Formations ciblées sur les applications de l'IA générative dans votre secteur d'activité.
+							</p>
+						</div>
+						<div slot="section-2" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Ateliers Pratiques</h4>
+							<p class="text-gray-600">
+								Mise en œuvre concrète des outils et des techniques d'IA à travers des cas d'usage réels.
+							</p>
+						</div>
+						<div slot="section-3" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Suivi Personnalisé</h4>
+							<p class="text-gray-600">
+								Accompagnement continu pour assurer l'intégration et l'adoption des compétences acquises.
+							</p>
+						</div>
+					</ServiceCard>
+				
+					<ServiceCard title="AI Pipeline" duration="4 semaines">
+						<p slot="subtitle" class="text-gray-700 text-md mb-4">
+							Implémentez des solutions IA sur mesure.
+							Optimisez vos processus clés grâce à l'IA.
+						</p>
+						<div slot="section-1" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Diagnostic Approfondi</h4>
+							<p class="text-gray-600">
+								Identification des processus à fort potentiel pour l'intégration de l'intelligence artificielle.
+							</p>
+						</div>
+						<div slot="section-2" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Développement Personnalisé</h4>
+							<p class="text-gray-600">
+								Conception et mise en place de solutions IA adaptées à vos besoins spécifiques.
+							</p>
+						</div>
+						<div slot="section-3" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Intégration et Suivi</h4>
+							<p class="text-gray-600">
+								Déploiement des solutions IA et suivi de leurs performances pour une amélioration continue.
+							</p>
+						</div>
+					</ServiceCard>
+				
+					<ServiceCard title="AI Architecture" duration="2 semaines">
+						<p slot="subtitle" class="text-gray-700 text-md mb-4">
+							Sécurisez votre environnement IA.
+							Garantissez la confidentialité de vos données.
+						</p>
+						<div slot="section-1" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Infrastructure Sécurisée</h4>
+							<p class="text-gray-600">
+								Mise en place d'une architecture IA privée pour une protection optimale de vos informations.
+							</p>
+						</div>
+						<div slot="section-2" class="mb-4">
+							<h4 class="text-lg font-semibold text-primary-700 mb-2">Conformité et Gouvernance</h4>
+							<p class="text-gray-600">
+								Solutions pour répondre aux exigences réglementaires et assurer une gestion responsable de l'IA.
+							</p>
+						</div>
+						<div slot="section-3" class="mb-4">
+							{/* You can leave sections empty if you don't need them for a specific card */}
+						</div>
+					</ServiceCard>
 				</div>
 			</div>
 		</section>
